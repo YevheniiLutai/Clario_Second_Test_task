@@ -5,14 +5,14 @@ let searchRezult = document.querySelector(".book-search-result");
 //***************************************************************************//
 //********************** Request to Google Book API *************************//
 getBooksFromAPI = (book, userRequest) => {
-  let request = new XMLHttpRequest();
-  let craetedSearchUrl = searchBooksAPI + userRequest;
-  request.open("GET", craetedSearchUrl);
-  request.addEventListener("load", () => {
-      let response = JSON.parse(request.responseText);
-      book(response); 
-  });
-  request.send();
+    let request = new XMLHttpRequest();
+    let craetedSearchUrl = searchBooksAPI + userRequest;
+    request.open("GET", craetedSearchUrl);
+    request.addEventListener("load", () => {
+        let response = JSON.parse(request.responseText);
+        book(response); 
+    });
+    request.send();
 }
 //**************************************************************************//
 //********************** Creat modal with book items ***********************//
